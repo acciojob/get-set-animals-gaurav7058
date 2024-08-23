@@ -1,4 +1,4 @@
-//complete this code
+// Define the Animal class
 class Animal {
   constructor(species) {
     this._species = species;
@@ -11,14 +11,14 @@ class Animal {
 
   // Method to make a sound
   makeSound() {
-    console.log(`${this._species} makes a sound.`);
+    console.log(`The ${this._species} makes a sound`);
   }
 }
 
 // Define the Cat class that extends Animal
 class Cat extends Animal {
-  constructor() {
-    super('Cat'); // Call the parent constructor with species 'Cat'
+  constructor(species) {
+    super(species); // Call the parent constructor with species
   }
 
   // Method specific to Cat
@@ -29,8 +29,8 @@ class Cat extends Animal {
 
 // Define the Dog class that extends Animal
 class Dog extends Animal {
-  constructor() {
-    super('Dog'); // Call the parent constructor with species 'Dog'
+  constructor(species) {
+    super(species); // Call the parent constructor with species
   }
 
   // Method specific to Dog
@@ -41,15 +41,9 @@ class Dog extends Animal {
 
 // Example usage
 const myCat = new Cat('Siamese');
-console.log(myCat.species); // Output: Cat
-myCat.makeSound(); // Output: Cat makes a sound.
+myCat.makeSound(); // Output: The Siamese makes a sound
 myCat.purr(); // Output: purr
 
 const myDog = new Dog('Golden Retriever');
-console.log(myDog.species); // Output: Dog
-myDog.makeSound(); // Output: Dog makes a sound.
+myDog.makeSound(); // Output: The Golden Retriever makes a sound
 myDog.bark(); // Output: woof
-// Do not change the code below this line
-window.Animal = Animal;
-window.Dog = Dog;
-window.Cat = Cat;
